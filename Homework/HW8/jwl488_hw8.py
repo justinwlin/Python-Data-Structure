@@ -212,6 +212,20 @@ def create_complete_bst(n):
     add_items(bst, 1, n)
     return bst
 
+def restore_bst(prefix_lst):
+    bst = BinarySearchTreeMap()
+    x = restore_bst_subtree(bst, prefix_lst, 0)
+    return x
+
+
+def restore_bst_subtree(bst, lst, index):
+    index = index
+    bst.subtree_insert(lst[index])
+    if index <= len(lst) - 1: #[0, 1, 2] ; len(lst) = 3
+        restore_bst_subtree(bst, lst, index + 1)
+        return bst
+    return bst
+
 
 #create_complete_bst(1)
 
