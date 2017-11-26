@@ -213,7 +213,7 @@ def create_complete_bst(n):
     return bst
 
 
-create_complete_bst(1)
+#create_complete_bst(1)
 
 # bst = BinarySearchTreeMap()
 # bst [9] = None
