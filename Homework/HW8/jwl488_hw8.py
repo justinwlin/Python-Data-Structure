@@ -194,7 +194,6 @@ def create_chain_bst(n):
 
 def add_items(bst, low, high):
     if high == 0:
-        bst = BinarySearchTreeMap()
         return bst
     if low == high:
         bst.subtree_insert(low)
@@ -208,11 +207,13 @@ def add_items(bst, low, high):
 
 def create_complete_bst(n):
     bst = BinarySearchTreeMap()
+    if n > 1 and n < 7:
+        raise KeyError("Your number is not n^k + 1.... Test with the proper number..., don't test using the number:", n)
     add_items(bst, 1, n)
     return bst
 
 
-#create_complete_bst(0)
+create_complete_bst(1)
 
 # bst = BinarySearchTreeMap()
 # bst [9] = None
