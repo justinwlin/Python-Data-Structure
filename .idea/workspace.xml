@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a235a64-b42b-4140-ac0b-3f1d5f13fb77" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StringMod.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pygame/Snake/FinalSnake.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py" afterPath="$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,6 +31,7 @@
     <SUITE FILE_PATH="coverage/PythonPrograms$test.coverage" NAME="test Coverage Results" MODIFIED="1508256191482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab4" />
     <SUITE FILE_PATH="coverage/PythonPrograms$testing.coverage" NAME="testing Coverage Results" MODIFIED="1509823423154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW6" />
     <SUITE FILE_PATH="coverage/PythonProgramBackup$jwl488_hw8__1_.coverage" NAME="jwl488_hw8 (1) Coverage Results" MODIFIED="1511760369978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW8" />
+    <SUITE FILE_PATH="coverage/PythonProgramBackup$CleaningUpSnake.coverage" NAME="CleaningUpSnake Coverage Results" MODIFIED="1511798600040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pygame/Archive" />
     <SUITE FILE_PATH="coverage/PythonPrograms$question5.coverage" NAME="question5 Coverage Results" MODIFIED="1509147003347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_hw6_q5.coverage" NAME="jwl488_hw6_q5 Coverage Results" MODIFIED="1509744053369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW6" />
     <SUITE FILE_PATH="coverage/PythonPrograms$yl4923_hw6_q5.coverage" NAME="yl4923_hw6_q5 Coverage Results" MODIFIED="1509745007823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW6" />
@@ -39,9 +39,11 @@
     <SUITE FILE_PATH="coverage/PythonPrograms$testing__1_.coverage" NAME="testing (1) Coverage Results" MODIFIED="1509997785037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW7" />
     <SUITE FILE_PATH="coverage/PythonPrograms$SANDBOX_RANDON.coverage" NAME="SANDBOX RANDON Coverage Results" MODIFIED="1510777000283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonPrograms$Reimplement3.coverage" NAME="Reimplement3 Coverage Results" MODIFIED="1509121246664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
+    <SUITE FILE_PATH="coverage/PythonProgramBackup$Snake.coverage" NAME="Snake Coverage Results" MODIFIED="1511794184264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pygame/Snake" />
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_hw5_q4.coverage" NAME="jwl488_hw5_q4 Coverage Results" MODIFIED="1509156036448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_hw4_q4.coverage" NAME="jwl488_hw4_q4 Coverage Results" MODIFIED="1507939243126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab4" />
     <SUITE FILE_PATH="coverage/PythonPrograms$Problem4.coverage" NAME="Problem4 Coverage Results" MODIFIED="1508528640265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab 7" />
+    <SUITE FILE_PATH="coverage/PythonProgramBackup$GameOver.coverage" NAME="GameOver Coverage Results" MODIFIED="1511797712445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pygame" />
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_hw5_q3.coverage" NAME="jwl488_hw5_q3 Coverage Results" MODIFIED="1509127190748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
     <SUITE FILE_PATH="coverage/PythonPrograms$DEBUG.coverage" NAME="DEBUG Coverage Results" MODIFIED="1506708320893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS HW O(N)" />
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_hw4.coverage" NAME="jwl488_hw4 Coverage Results" MODIFIED="1507939568795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab4" />
@@ -58,6 +60,7 @@
     <SUITE FILE_PATH="coverage/PythonPrograms$1003Testing.coverage" NAME="1003Testing Coverage Results" MODIFIED="1505502365026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonPrograms$SnakeTry.coverage" NAME="SnakeTry Coverage Results" MODIFIED="1510280323189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pygame" />
     <SUITE FILE_PATH="coverage/PythonProgramBackup$jwl488_hw8.coverage" NAME="jwl488_hw8 Coverage Results" MODIFIED="1511674401598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW 8" />
+    <SUITE FILE_PATH="coverage/PythonProgramBackup$spaceinvaders.coverage" NAME="spaceinvaders Coverage Results" MODIFIED="1511798764690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pygame/Archive/Space_Invaders-master" />
     <SUITE FILE_PATH="coverage/PythonPrograms$binary.coverage" NAME="binary Coverage Results" MODIFIED="1506729770965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Labs/september292017" />
     <SUITE FILE_PATH="coverage/PythonPrograms$NoteSeptemberThirteen.coverage" NAME="NoteSeptemberThirteen Coverage Results" MODIFIED="1505331203116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_hw6_q3.coverage" NAME="jwl488_hw6_q3 Coverage Results" MODIFIED="1509762734691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW6" />
@@ -80,6 +83,7 @@
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_hw7.coverage" NAME="jwl488_hw7 Coverage Results" MODIFIED="1510673189347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW7" />
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_h2_q3.coverage" NAME="jwl488_h2_q3 Coverage Results" MODIFIED="1506702637581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS HW O(N)" />
     <SUITE FILE_PATH="coverage/PythonPrograms$TestFileforLab7.coverage" NAME="TestFileforLab7 Coverage Results" MODIFIED="1508526231150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab 7" />
+    <SUITE FILE_PATH="coverage/PythonProgramBackup$FinalSnake.coverage" NAME="FinalSnake Coverage Results" MODIFIED="1511802645456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pygame/Snake" />
     <SUITE FILE_PATH="coverage/PythonPrograms$Polynomial.coverage" NAME="Polynomial Coverage Results" MODIFIED="1505871319588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonPrograms$Shift.coverage" NAME="Shift Coverage Results" MODIFIED="1505871775064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS HW" />
     <SUITE FILE_PATH="coverage/PythonPrograms$Sandbox.coverage" NAME="Sandbox Coverage Results" MODIFIED="1510173309101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
@@ -92,82 +96,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="jwl488_hw8.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py">
+      <file leaf-file-name="Snake.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Snake/Snake.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="384" column="35" lean-forward="true" selection-start-line="384" selection-start-column="35" selection-end-line="384" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <element signature="e#6538#6989#0" expanded="false" />
-                <element signature="e#7013#8396#0" expanded="false" />
-                <element signature="e#9208#9340#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringMod.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StringMod.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="-1887">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homework/HW8/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
-              <caret line="189" column="30" lean-forward="false" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrStackQueue.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataStructures/ArrStackQueue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="26" />
-              <folding>
-                <element signature="e#28#32#0" expanded="false" />
-                <element signature="e#56#507#0" expanded="false" />
-                <element signature="e#531#1911#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TakingSourceCode.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TakingSourceCode.py">
+      <file leaf-file-name="CleaningUpSnake.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Snake/CleaningUpSnake.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="4" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#2102#2620#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkedBinaryTree.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataStructures/LinkedBinaryTree.py">
+      <file leaf-file-name="spaceinvaders.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Archive/Space_Invaders-master/spaceinvaders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1779">
-              <caret line="157" column="2" lean-forward="false" selection-start-line="157" selection-start-column="2" selection-end-line="158" selection-end-column="22" />
+            <state relative-caret-position="366">
+              <caret line="647" column="15" lean-forward="false" selection-start-line="647" selection-start-column="9" selection-end-line="647" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jwl488_hw7.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homework/HW7/jwl488_hw7.py">
+      <file leaf-file-name="FinalSnake.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pygame/Snake/FinalSnake.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="301" selection-end-column="17" />
+            <state relative-caret-position="189">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#3703#3778#0" expanded="false" />
+                <element signature="e#4180#4312#0" expanded="false" />
+                <element signature="e#4559#4625#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="music.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Archive/music.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnakeTry.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Archive/SnakeTry.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Platformer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Archive/Platformer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="241" column="4" lean-forward="false" selection-start-line="241" selection-start-column="4" selection-end-line="243" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -184,17 +187,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>yield</find>
-      <find>g</find>
-      <find>regularinput</find>
-      <find>head2</find>
-      <find>result</find>
-      <find>compare1.data[0]</find>
-      <find>none</find>
-      <find>subtree_inorder</find>
-      <find>s</find>
-      <find>init</find>
-      <find>ORIGINALroot</find>
       <find>min</find>
       <find>min_and_max</find>
       <find>len(</find>
@@ -209,6 +201,22 @@
       <find>[9, 7, 3, 1, 5, 13, 11, 15]</find>
       <find>node</find>
       <find>print</find>
+      <find>;</find>
+      <find>xs</find>
+      <find>score</find>
+      <find>applepos = (random.randint(0, 590), random.randint(0, 590))</find>
+      <find>10</find>
+      <find>music</find>
+      <find>init</find>
+      <find>create_text</find>
+      <find>startGame</find>
+      <find>titleText</find>
+      <find>Arial</find>
+      <find>die(screen</find>
+      <find>Text</find>
+      <find>die(s</find>
+      <find>main()</find>
+      <find>time</find>
     </findStrings>
     <replaceStrings>
       <replace>lst2</replace>
@@ -228,11 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Lab 7/Problem5.py" />
-        <option value="$PROJECT_DIR$/Lab 7/Problem4.py" />
-        <option value="$PROJECT_DIR$/Homework/Homework5/jwl488_hw5_q1.py" />
-        <option value="$PROJECT_DIR$/Homework/testing.py" />
-        <option value="$PROJECT_DIR$/Homework/jwl488_hw1_q1.py" />
         <option value="$PROJECT_DIR$/Labs/Lab 7/StackandQueue.py" />
         <option value="$PROJECT_DIR$/Homework/Reimplement3.py" />
         <option value="$PROJECT_DIR$/Labs/Lab 8/Vitamin2.py" />
@@ -279,6 +282,11 @@
         <option value="$PROJECT_DIR$/Homework/HW8/test.py" />
         <option value="$PROJECT_DIR$/StringMod.py" />
         <option value="$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py" />
+        <option value="$PROJECT_DIR$/Pygame/Snake/Snake.py" />
+        <option value="$PROJECT_DIR$/Pygame/GameOver.py" />
+        <option value="$PROJECT_DIR$/Pygame/Archive/CleaningUpSnake.py" />
+        <option value="$PROJECT_DIR$/Pygame/Snake/CleaningUpSnake.py" />
+        <option value="$PROJECT_DIR$/Pygame/Snake/FinalSnake.py" />
       </list>
     </option>
   </component>
@@ -288,7 +296,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="370" />
     <option name="width" value="1559" />
     <option name="height" value="1038" />
@@ -321,6 +329,30 @@
               <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
               <item name="DataStructures" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PythonProgramBackup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
+              <item name="Pygame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonProgramBackup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
+              <item name="Pygame" type="462c0819:PsiDirectoryNode" />
+              <item name="Archive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonProgramBackup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
+              <item name="Pygame" type="462c0819:PsiDirectoryNode" />
+              <item name="Archive" type="462c0819:PsiDirectoryNode" />
+              <item name="Space_Invaders-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonProgramBackup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
+              <item name="Pygame" type="462c0819:PsiDirectoryNode" />
+              <item name="Snake" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -335,12 +367,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Justin Lin\Desktop\PythonProgramBackup\Pygame\Snake" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Justin Lin\Desktop\PythonProgramBackup\Pygame\Snake" />
       <recent name="C:\Users\Justin Lin\Desktop\PythonProgramBackup\Sandbox_Testing_Folder" />
       <recent name="C:\Users\Justin Lin\Desktop\PythonProgramBackup\Archive\MSC" />
       <recent name="C:\Users\Justin Lin\Desktop\PythonProgramBackup\Archive" />
       <recent name="C:\Users\Justin Lin\Desktop\PythonProgramBackup\Homework" />
-      <recent name="C:\Users\Justin Lin\Documents\PythonPrograms\Homework\HW5" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -355,21 +390,93 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.jwl488_hw8 (1)">
-    <configuration name="SANDBOX RANDON" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.FinalSnake">
+    <configuration name="CleaningUpSnake (1)" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pygame/Snake" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonPrograms" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Justin Lin\Desktop\PythonProgramBackup\Sandbox_Testing_Folder\sandbox.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pygame/Snake/CleaningUpSnake.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="CleaningUpSnake" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pygame/Archive" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonPrograms" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Justin Lin\Desktop\PythonProgramBackup\Pygame\Snake\CleaningUpSnake.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="FinalSnake" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pygame/Snake" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonPrograms" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pygame/Snake/FinalSnake.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="GameOver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pygame" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonPrograms" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pygame/GameOver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="Snake" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pygame/Snake" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonPrograms" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pygame/Snake/Snake.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -392,93 +499,40 @@
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="jwl488_hw7" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="spaceinvaders" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Homework/HW7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pygame/Archive/Space_Invaders-master" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonPrograms" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Homework/HW7/jwl488_hw7.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pygame/Archive/Space_Invaders-master/spaceinvaders.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="jwl488_hw8 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Homework/HW8" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonPrograms" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="jwl488_hw8" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Homework/HW 8" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonPrograms" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Homework/HW 8/jwl488_hw8.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Homework/HW8" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonPrograms" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Homework/HW8/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Python.SANDBOX RANDON" />
-      <item index="2" class="java.lang.String" itemvalue="Python.jwl488_hw7" />
-      <item index="3" class="java.lang.String" itemvalue="Python.jwl488_hw8" />
-      <item index="4" class="java.lang.String" itemvalue="Python.jwl488_hw8 (1)" />
-      <item index="5" class="java.lang.String" itemvalue="Python.test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Snake" />
+      <item index="2" class="java.lang.String" itemvalue="Python.CleaningUpSnake" />
+      <item index="3" class="java.lang.String" itemvalue="Python.GameOver" />
+      <item index="4" class="java.lang.String" itemvalue="Python.CleaningUpSnake (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.spaceinvaders" />
+      <item index="6" class="java.lang.String" itemvalue="Python.FinalSnake" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.jwl488_hw8 (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.jwl488_hw8" />
-        <item index="3" class="java.lang.String" itemvalue="Python.SANDBOX RANDON" />
-        <item index="4" class="java.lang.String" itemvalue="Python.jwl488_hw7" />
+        <item index="0" class="java.lang.String" itemvalue="Python.FinalSnake" />
+        <item index="1" class="java.lang.String" itemvalue="Python.spaceinvaders" />
+        <item index="2" class="java.lang.String" itemvalue="Python.CleaningUpSnake" />
+        <item index="3" class="java.lang.String" itemvalue="Python.GameOver" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Snake" />
       </list>
     </recent_temporary>
   </component>
@@ -499,15 +553,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35416666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35416666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -693,6 +748,11 @@
           <line>221</line>
           <option name="timeStamp" value="232" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Pygame/Snake/CleaningUpSnake.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="234" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -704,62 +764,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="234" />
+      <option name="time" value="239" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Homework/HW3/jwl488_hw3_q7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW6/hold5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="155" column="31" lean-forward="false" selection-start-line="155" selection-start-column="31" selection-end-line="155" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW3/jwl488_h3_q5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW3/jwl488_h3_q3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW3/jwl488_h3_q4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/codecs.py" />
-    <entry file="file://$PROJECT_DIR$/Labs/Lab 7/StackandQueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="55" column="9" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW7/binary tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Homework/HW7/testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2730">
@@ -971,7 +980,7 @@
     <entry file="file://$PROJECT_DIR$/Homework/HW 8/jwl488_hw8.py" />
     <entry file="file://$PROJECT_DIR$/DataStructures/LinkedBinaryTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1779">
+        <state relative-caret-position="3297">
           <caret line="157" column="2" lean-forward="false" selection-start-line="157" selection-start-column="2" selection-end-line="158" selection-end-column="22" />
           <folding />
         </state>
@@ -979,7 +988,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Homework/HW7/jwl488_hw7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
+        <state relative-caret-position="6300">
           <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="301" selection-end-column="17" />
           <folding />
         </state>
@@ -989,15 +998,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
           <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homework/HW8/cheatcode.py" />
+    <entry file="file://$PROJECT_DIR$/TakingSourceCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homework/HW8/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3969">
+          <caret line="189" column="30" lean-forward="false" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW8/cheatcode.py">
+    <entry file="file://$PROJECT_DIR$/StringMod.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="546">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="384" column="35" lean-forward="false" selection-start-line="384" selection-start-column="35" selection-end-line="384" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#6538#6989#0" expanded="false" />
+            <element signature="e#7013#8396#0" expanded="false" />
+            <element signature="e#9208#9340#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,41 +1053,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TakingSourceCode.py">
+    <entry file="file://$PROJECT_DIR$/Pygame/Snake/Snake.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="-1887">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/GameOver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/SnakeTry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW8/test.py">
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/Platformer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="189" column="30" lean-forward="false" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="30" />
+        <state relative-caret-position="210">
+          <caret line="241" column="4" lean-forward="false" selection-start-line="241" selection-start-column="4" selection-end-line="243" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringMod.py">
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/music.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="147">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py">
+    <entry file="file://$PROJECT_DIR$/Pygame/Snake/CleaningUpSnake.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="384" column="35" lean-forward="true" selection-start-line="384" selection-start-column="35" selection-end-line="384" selection-end-column="35" />
+        <state relative-caret-position="84">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#6538#6989#0" expanded="false" />
-            <element signature="e#7013#8396#0" expanded="false" />
-            <element signature="e#9208#9340#0" expanded="false" />
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#2102#2620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/Space_Invaders-master/spaceinvaders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="647" column="15" lean-forward="false" selection-start-line="647" selection-start-column="9" selection-end-line="647" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/Snake/FinalSnake.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#3703#3778#0" expanded="false" />
+            <element signature="e#4180#4312#0" expanded="false" />
+            <element signature="e#4559#4625#0" expanded="false" />
           </folding>
         </state>
       </provider>
