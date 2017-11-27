@@ -30,6 +30,8 @@ def SNAKEGAME():
     dirs = 0
     score = 0
     move = 1
+
+    tempDir = None
     #Initializes position of apple
     applepos = (random.randint(0, 590), random.randint(0, 590))
 
@@ -38,6 +40,7 @@ def SNAKEGAME():
 
     #Initializes size of each snake segment
     SnakeSize = 20
+    moveAmt = SnakeSize
 
     # Call this function so the Pygame library can initialize itself
     pygame.init()
@@ -84,17 +87,38 @@ def SNAKEGAME():
 
 
     def snakeLogic():
+        moveAmt = SnakeSize
+
         if dirs == - 1:
+            i = len(xs) - 1
+            move = 1
+            # Moves the trailing tail to follow the head
+            while i >= 1:
+                xs[i] = xs[i]
+                ys[i] = ys[i]
+                i -= 1
+
             xs[0] = xs[0]
             ys[0] = xs [0]
+            move = 0
+            moveAmt = 0
         if dirs == 0:
-            ys[0] += SnakeSize
+            ys[0] += moveAmt
         elif dirs == 1:
-            xs[0] += SnakeSize
+            xs[0] += moveAmt
         elif dirs == 2:
-            ys[0] -= SnakeSize
+            ys[0] -= moveAmt
         elif dirs == 3:
-            xs[0] -= SnakeSize
+            xs[0] -= moveAmt
+
+        # if dirs == 0:
+        #     ys[0] += SnakeSize
+        # elif dirs == 1:
+        #     xs[0] += SnakeSize
+        # elif dirs == 2:
+        #     ys[0] -= SnakeSize
+        # elif dirs == 3:
+        #     xs[0] -= SnakeSize
 
     pygame.mixer.music.load('naruto.wav')
     pygame.mixer.music.set_endevent(pygame.constants.USEREVENT)
@@ -128,6 +152,7 @@ def SNAKEGAME():
                 if e.key == K_EQUALS:
                     clockSpeed += 1
                 if e.key == K_MINUS:
+                    print("JASLKDJ")
                     clockSpeed -= 1
                 if e.key == K_p:
                     dirs = -1
@@ -138,12 +163,12 @@ def SNAKEGAME():
             pygame.mixer.music.play()
 
         #If the Snake Collides with itself
-        i = len(xs) - 1
-        if dirs != -1:
-            while i >= 2:
-                if collide(xs[0], xs[i], ys[0], ys[i], SnakeSize, SnakeSize, SnakeSize, SnakeSize):
-                    die(screen, score)
-                i -= 1
+        # i = len(xs) - 1
+        # if dirs != -1:
+        #     while i >= 2:
+        #         if collide(xs[0], xs[i], ys[0], ys[i], SnakeSize, SnakeSize, SnakeSize, SnakeSize):
+        #             die(screen, score)
+        #         i -= 1
 
         #If the snake Collides with an Apple
         if collide(xs[0], applepos[0], ys[0], applepos[1], SnakeSize, sizeOfApple, SnakeSize, sizeOfApple):
