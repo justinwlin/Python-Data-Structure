@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a235a64-b42b-4140-ac0b-3f1d5f13fb77" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pygame/Snake/FinalSnake.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pygame/Snake/FinalSnake.py" afterPath="$PROJECT_DIR$/Pygame/Snake/FinalSnake.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,7 +82,7 @@
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_hw7.coverage" NAME="jwl488_hw7 Coverage Results" MODIFIED="1510673189347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework/HW7" />
     <SUITE FILE_PATH="coverage/PythonPrograms$jwl488_h2_q3.coverage" NAME="jwl488_h2_q3 Coverage Results" MODIFIED="1506702637581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS HW O(N)" />
     <SUITE FILE_PATH="coverage/PythonPrograms$TestFileforLab7.coverage" NAME="TestFileforLab7 Coverage Results" MODIFIED="1508526231150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab 7" />
-    <SUITE FILE_PATH="coverage/PythonProgramBackup$FinalSnake.coverage" NAME="FinalSnake Coverage Results" MODIFIED="1511802645456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pygame/Snake" />
+    <SUITE FILE_PATH="coverage/PythonProgramBackup$FinalSnake.coverage" NAME="FinalSnake Coverage Results" MODIFIED="1511803664757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pygame/Snake" />
     <SUITE FILE_PATH="coverage/PythonPrograms$Polynomial.coverage" NAME="Polynomial Coverage Results" MODIFIED="1505871319588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonPrograms$Shift.coverage" NAME="Shift Coverage Results" MODIFIED="1505871775064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS HW" />
     <SUITE FILE_PATH="coverage/PythonPrograms$Sandbox.coverage" NAME="Sandbox Coverage Results" MODIFIED="1510173309101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataStructures" />
@@ -109,8 +108,8 @@
       <file leaf-file-name="CleaningUpSnake.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pygame/Snake/CleaningUpSnake.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#2102#2620#0" expanded="false" />
@@ -119,26 +118,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spaceinvaders.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pygame/Archive/Space_Invaders-master/spaceinvaders.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="647" column="15" lean-forward="false" selection-start-line="647" selection-start-column="9" selection-end-line="647" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FinalSnake.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pygame/Snake/FinalSnake.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="-2889">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#3703#3778#0" expanded="false" />
-                <element signature="e#4180#4312#0" expanded="false" />
-                <element signature="e#4559#4625#0" expanded="false" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,7 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>min</find>
       <find>min_and_max</find>
       <find>len(</find>
       <find>isBalanced</find>
@@ -207,7 +192,6 @@
       <find>applepos = (random.randint(0, 590), random.randint(0, 590))</find>
       <find>10</find>
       <find>music</find>
-      <find>init</find>
       <find>create_text</find>
       <find>startGame</find>
       <find>titleText</find>
@@ -215,8 +199,10 @@
       <find>die(screen</find>
       <find>Text</find>
       <find>die(s</find>
-      <find>main()</find>
       <find>time</find>
+      <find>main()</find>
+      <find>init</find>
+      <find>angle</find>
     </findStrings>
     <replaceStrings>
       <replace>lst2</replace>
@@ -554,7 +540,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -562,7 +547,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35416666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35416666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1095,10 +1080,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/Space_Invaders-master/spaceinvaders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3453">
+          <caret line="644" column="0" lean-forward="true" selection-start-line="644" selection-start-column="0" selection-end-line="644" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pygame/Snake/CleaningUpSnake.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#2102#2620#0" expanded="false" />
@@ -1106,23 +1099,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pygame/Archive/Space_Invaders-master/spaceinvaders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="647" column="15" lean-forward="false" selection-start-line="647" selection-start-column="9" selection-end-line="647" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pygame/Snake/FinalSnake.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="-2889">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#3703#3778#0" expanded="false" />
-            <element signature="e#4180#4312#0" expanded="false" />
-            <element signature="e#4559#4625#0" expanded="false" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

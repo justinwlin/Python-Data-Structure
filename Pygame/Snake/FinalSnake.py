@@ -1,12 +1,12 @@
-import pygame, random, sys
+import pygame, random, sys, math
 from pygame.locals import *
 
 # screenFont = pygame.font.SysFont('Arial', 20)
 #         scoreText = screenFont.render("Score: " + str(score), True, BLACK)
 #         t = screenFont.render("Clock Speed: " + str(clockSpeed), True, BLACK)
 #         #Pixel Location of Score
-#         s.blit(scoreText, (10, 10))
-#         s.blit(t, (10, 35))
+#         screen.blit(scoreText, (10, 10))
+#         screen.blit(t, (10, 35))
 
 def SNAKEGAME():
     # --- Globals ---
@@ -21,6 +21,7 @@ def SNAKEGAME():
     BLACK   = (0,   0,   0)
 
     FONT = 'Arial'
+
     # Set the initial starting point
     xs = [290, 290, 290, 290, 290]
     ys = [290, 270, 250, 230, 210]
@@ -44,7 +45,7 @@ def SNAKEGAME():
     # Create an 800x600 sized screen
     height_screen = 600
     width_screen = 600
-    s = pygame.display.set_mode([width_screen, height_screen])
+    screen = pygame.display.set_mode([width_screen, height_screen])
 
     # Set the title of the window
     pygame.display.set_caption('The best game')
@@ -95,7 +96,6 @@ def SNAKEGAME():
         elif dirs == 3:
             xs[0] -= SnakeSize
 
-
     pygame.mixer.music.load('naruto.wav')
     pygame.mixer.music.set_endevent(pygame.constants.USEREVENT)
     pygame.mixer.music.play()
@@ -103,13 +103,16 @@ def SNAKEGAME():
     #Controling Menu
     startingMenu = True
     GameStart = False
-    #GAME UPDATE
 
+    #GAME UPDATE
     while not done:
         clock.tick(clockSpeed)
-        # Background Color
-        s.fill(BLUE)
 
+        # Background Color
+        screen.fill(BLUE)
+
+
+        
         #Keyboard Logic
         pause = True
         for e in pygame.event.get():
@@ -130,6 +133,10 @@ def SNAKEGAME():
                     clockSpeed = 5
                 if e.key == K_9:
                     clockSpeed = 9
+                if e.key == K_EQUALS:
+                    clockSpeed += 1
+                if e.key == K_MINUS:
+                    clockSpeed -= 1
                 if e.key == K_p:
                     pass
 
@@ -142,7 +149,7 @@ def SNAKEGAME():
         i = len(xs) - 1
         while i >= 2:
             if collide(xs[0], xs[i], ys[0], ys[i], SnakeSize, SnakeSize, SnakeSize, SnakeSize):
-                die(s, score)
+                die(screen, score)
             i -= 1
 
         #If the snake Collides with an Apple
@@ -154,7 +161,7 @@ def SNAKEGAME():
 
         #Kill snake if it surpasses the boundaries
         if xs[0] < 0 or xs[0] > width_screen - SnakeSize or ys[0] < 0 or ys[0] > height_screen - SnakeSize:
-            die(s, score)
+            die(screen, score)
 
         i = len(xs) - 1
 
@@ -169,18 +176,18 @@ def SNAKEGAME():
 
         #Refreshing the Snake
         for i in range(0, len(xs)):
-            s.blit(img, (xs[i], ys[i]))
+            screen.blit(img, (xs[i], ys[i]))
 
         #Refreshing the Apple
-        s.blit(appleimage, applepos)
+        screen.blit(appleimage, applepos)
 
         #Refreshing the rending of the score
         screenFont = pygame.font.SysFont('Arial', 20)
         scoreText = screenFont.render("Score: " + str(score), True, BLACK)
         t = screenFont.render("Clock Speed: " + str(clockSpeed), True, BLACK)
         #Pixel Location of Score
-        s.blit(scoreText, (10, 10))
-        s.blit(t, (10, 35))
+        screen.blit(scoreText, (10, 10))
+        screen.blit(t, (10, 35))
 
         pygame.display.update()
 
