@@ -367,6 +367,14 @@ def restore_bst_subtree(bst, lst, index):
     return bst
 
 
+example_preorder_lst = [9, 7, 3, 1, 5, 13, 11, 15]
+result = restore_bst(example_preorder_lst)
+result_1 = restore_bst([1])
+for node in result.inorder(): #CHECKS IF THE INORDER RESULT is 1
+    print(node.item.key == 1)
+print("All test cases passed for 3.")
+
+
 '''
 result = restore_bst([9, 7, 3, 1, 5, 13, 11, 15])
 compare = [9, 7, 3, 1, 5, 13, 11, 15]
@@ -391,14 +399,14 @@ result = restore_bst([])
 i = len(result)
 print(i == 0)
 
-'''
+
 result = restore_bst([1])
 compare = [1]
 i = 0
 for node in result.inorder():
     print(node.item.key, end="")
     print(node.item.key == 1)
-
+'''
 
 #===================================
 ########### Q4 ####################
