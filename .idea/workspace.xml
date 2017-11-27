@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a235a64-b42b-4140-ac0b-3f1d5f13fb77" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StringMod.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py" afterPath="$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,11 +90,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="jwl488_hw8.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jwl488_hw8.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="384" column="35" lean-forward="true" selection-start-line="384" selection-start-column="35" selection-end-line="384" selection-end-column="35" />
+            <state relative-caret-position="21">
+              <caret line="384" column="35" lean-forward="false" selection-start-line="384" selection-start-column="35" selection-end-line="384" selection-end-column="35" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
                 <element signature="e#6538#6989#0" expanded="false" />
@@ -107,11 +105,53 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FinalGame.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pygame/Archive/FinalGame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="music.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Archive/music.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnakeTry.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Archive/SnakeTry.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Platformer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pygame/Archive/Platformer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="StringMod.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringMod.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="546">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,7 +160,7 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homework/HW8/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
+            <state relative-caret-position="3969">
               <caret line="189" column="30" lean-forward="false" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="30" />
               <folding />
             </state>
@@ -144,7 +184,7 @@
       <file leaf-file-name="TakingSourceCode.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TakingSourceCode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
+            <state relative-caret-position="63">
               <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -153,20 +193,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkedBinaryTree.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataStructures/LinkedBinaryTree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1779">
-              <caret line="157" column="2" lean-forward="false" selection-start-line="157" selection-start-column="2" selection-end-line="158" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jwl488_hw7.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homework/HW7/jwl488_hw7.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
+            <state relative-caret-position="6300">
               <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="301" selection-end-column="17" />
               <folding />
             </state>
@@ -288,7 +318,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="370" />
     <option name="width" value="1559" />
     <option name="height" value="1038" />
@@ -308,6 +338,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -321,11 +352,35 @@
               <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
               <item name="DataStructures" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PythonProgramBackup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
+              <item name="Pygame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonProgramBackup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
+              <item name="Pygame" type="462c0819:PsiDirectoryNode" />
+              <item name="Archive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonProgramBackup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
+              <item name="Pygame" type="462c0819:PsiDirectoryNode" />
+              <item name="Archive" type="462c0819:PsiDirectoryNode" />
+              <item name="sounds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonProgramBackup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonProgramBackup" type="462c0819:PsiDirectoryNode" />
+              <item name="Pygame" type="462c0819:PsiDirectoryNode" />
+              <item name="Archive" type="462c0819:PsiDirectoryNode" />
+              <item name="Space_Invaders-master" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -499,19 +554,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35416666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35416666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31798247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -709,34 +764,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Homework/HW3/jwl488_hw3_q7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW6/hold5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="155" column="31" lean-forward="false" selection-start-line="155" selection-start-column="31" selection-end-line="155" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW3/jwl488_h3_q5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW3/jwl488_h3_q3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Homework/HW3/jwl488_h3_q4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -971,7 +998,7 @@
     <entry file="file://$PROJECT_DIR$/Homework/HW 8/jwl488_hw8.py" />
     <entry file="file://$PROJECT_DIR$/DataStructures/LinkedBinaryTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1779">
+        <state relative-caret-position="3297">
           <caret line="157" column="2" lean-forward="false" selection-start-line="157" selection-start-column="2" selection-end-line="158" selection-end-column="22" />
           <folding />
         </state>
@@ -979,7 +1006,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Homework/HW7/jwl488_hw7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
+        <state relative-caret-position="6300">
           <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="301" selection-end-column="17" />
           <folding />
         </state>
@@ -989,18 +1016,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
           <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homework/HW8/cheatcode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Homework/HW8/cheatcode.py" />
     <entry file="file://$PROJECT_DIR$/DataStructures/ArrStackQueue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1015,7 +1034,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TakingSourceCode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
+        <state relative-caret-position="63">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -1025,7 +1044,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Homework/HW8/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
+        <state relative-caret-position="3969">
           <caret line="189" column="30" lean-forward="false" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="30" />
           <folding />
         </state>
@@ -1033,22 +1052,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMod.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="546">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Homework/HW8/jwl488_hw8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="384" column="35" lean-forward="true" selection-start-line="384" selection-start-column="35" selection-end-line="384" selection-end-column="35" />
+        <state relative-caret-position="21">
+          <caret line="384" column="35" lean-forward="false" selection-start-line="384" selection-start-column="35" selection-end-line="384" selection-end-column="35" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
             <element signature="e#6538#6989#0" expanded="false" />
             <element signature="e#7013#8396#0" expanded="false" />
             <element signature="e#9208#9340#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/music.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/SnakeTry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/Platformer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pygame/Archive/FinalGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
