@@ -29,7 +29,7 @@ def SNAKEGAME():
     #Initializes Direction and Score
     dirs = 0
     score = 0
-
+    move = 1
     #Initializes position of apple
     applepos = (random.randint(0, 590), random.randint(0, 590))
 
@@ -111,8 +111,6 @@ def SNAKEGAME():
         # Background Color
         screen.fill(BLUE)
 
-
-        
         #Keyboard Logic
         pause = True
         for e in pygame.event.get():
@@ -127,18 +125,12 @@ def SNAKEGAME():
                     dirs = 1
                 if e.key == K_ESCAPE:
                     sys.exit(0)
-                if e.key == K_0:
-                    clockSpeed = 1
-                if e.key == K_5:
-                    clockSpeed = 5
-                if e.key == K_9:
-                    clockSpeed = 9
                 if e.key == K_EQUALS:
                     clockSpeed += 1
                 if e.key == K_MINUS:
                     clockSpeed -= 1
                 if e.key == K_p:
-                    pass
+                    dirs = -1
 
         #Background Music
         if e.type == pygame.constants.USEREVENT:
@@ -147,10 +139,11 @@ def SNAKEGAME():
 
         #If the Snake Collides with itself
         i = len(xs) - 1
-        while i >= 2:
-            if collide(xs[0], xs[i], ys[0], ys[i], SnakeSize, SnakeSize, SnakeSize, SnakeSize):
-                die(screen, score)
-            i -= 1
+        if dirs != -1:
+            while i >= 2:
+                if collide(xs[0], xs[i], ys[0], ys[i], SnakeSize, SnakeSize, SnakeSize, SnakeSize):
+                    die(screen, score)
+                i -= 1
 
         #If the snake Collides with an Apple
         if collide(xs[0], applepos[0], ys[0], applepos[1], SnakeSize, sizeOfApple, SnakeSize, sizeOfApple):
@@ -165,9 +158,10 @@ def SNAKEGAME():
 
         i = len(xs) - 1
 
+        #Moves the trailing tail to follow the head
         while i >= 1:
-            xs[i] = xs[i - 1]
-            ys[i] = ys[i - 1]
+            xs[i] = xs[i - move]
+            ys[i] = ys[i - move]
             i -= 1
 
         #INCREASING SNAKE SIZE LOGIC
