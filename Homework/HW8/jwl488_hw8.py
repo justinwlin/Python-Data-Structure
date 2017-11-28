@@ -196,6 +196,10 @@ class BinarySearchTreeMap:
             yield from self.subtree_preorder(curr_root.right)
 
     def get_ith_smallest(self, i):
+        testing = (sys._getframe().f_back.f_code)
+        lines = inspect.getsourcelines(testing)
+        print("".join(lines[0]))
+        
         root = self.root
         if i > len(self) or i == 0:
             return IndexError
@@ -366,7 +370,7 @@ def restore_bst_subtree(bst, lst, index):
             stack.push(temp.left)
     return bst
 
-
+'''
 example_preorder_lst = [9, 7, 3, 1, 5, 13, 11, 15]
 result = restore_bst(example_preorder_lst)
 result_1 = restore_bst([1])
@@ -375,7 +379,7 @@ for node in result.inorder(): #CHECKS IF THE INORDER RESULT is 1
 print("All test cases passed for 3.")
 
 
-'''
+
 result = restore_bst([9, 7, 3, 1, 5, 13, 11, 15])
 compare = [9, 7, 3, 1, 5, 13, 11, 15]
 compare2 = [1, 3, 5, 7, 9, 11, 13, 15]

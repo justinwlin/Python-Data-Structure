@@ -10,6 +10,11 @@ PURPLE = (203, 0, 255)
 RED = (237, 28, 36)
 BLACK = (0, 0, 0)
 
+REDBUTTON = (200, 40, 40)
+GREENBUTTON = (78, 200, 87)
+bright_red = (255,0,0)
+bright_green = (0,255,0)
+
 # Set the width and height of each snake segment
 segment_width = 15
 segment_height = 15
@@ -63,6 +68,8 @@ class APPLE(pygame.sprite.Sprite):
 # Call this function so the Pygame library can initialize itself
 pygame.init()
 
+#Joystick
+
 # Create an 800x600 sized screen
 height_screen = 600
 width_screen = 800
@@ -73,6 +80,7 @@ pygame.display.set_caption('Snake Example')
 
 allspriteslist = pygame.sprite.Group()
 applespriteslist = pygame.sprite.Group()
+
 # Create an initial snake
 snake_segments = []
 apple_segments = []
@@ -101,10 +109,25 @@ def textToScreen(str):
     textrect.centery = screen.get_rect().centery
     screen.blit(text, textrect)
 
+#initialize Joystick
+joystick_count = pygame.joystick.get_count()
+
+# For each joystick:
+for i in range(joystick_count):
+    joystick = pygame.joystick.Joystick(i)
+    joystick.init()
+
+buttons = joystick.get_numbuttons()
+hats = joystick.get_numhats()
+
+#Pausing Game
 def paused():
     paused = True
-    pygame.mixer.music.pause
     while paused:
+        for k in range(buttons):
+            newbutton = joystick.get_button(k)
+            if newbutton == 1 and (k == 0 or k == 1 or k == 2 or k == 3):
+                paused = False
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -112,15 +135,49 @@ def paused():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_c:
                     paused = False
-                    pygame.mixer.music.unpause
                 elif event.key == pygame.K_q:
                     pygame.quit()
                     quit()
         screen.fill(WHITE)
-        textToScreen("PAUSED: Press C To Resume")
+        textToScreen("PAUSED: Press a Letter Button To Resume")
         pygame.display.update()
         clock.tick(5)
 
+
+# def game_intro(intro, brightGreen, brightRed):
+#     while intro:
+#         for event in pygame.event.get():
+#             # print(event)
+#             if event.type == pygame.QUIT:
+#                 pygame.quit()
+#                 quit()
+#
+#         screen.fill(WHITE)
+#         largeText = pygame.font.Font('freesansbold.ttf', 115)
+#         textToScreen("A bit Racey" + str(brightGreen)+ str(brightRed))
+#         for i in range(hats):
+#             hat = joystick.get_hat(i)
+#             if hat[0] == -1:
+#                 brightGreen = True
+#                 brightRed = False
+#             if hat[0] == 1:
+#                 brightGreen = False
+#                 brightRed = True
+#         if brightGreen is True:
+#             pygame.draw.rect(screen, bright_green, (150, 450, 100, 50))
+#             pygame.draw.rect(screen, RED, (550, 450, 100, 50))
+#         else:
+#             pygame.draw.rect(screen, GREENBUTTON, (150, 450, 100, 50))
+#             pygame.draw.rect(screen, bright_red, (550, 450, 100, 50))
+#
+#         for k in range(buttons):
+#             newbutton = joystick.get_button(k)
+#             if newbutton == 1 and (k == 0 or k == 1 or k == 2 or k == 3):
+#                 intro = False
+#
+#         pygame.display.update()
+#         clock.tick(15)
+#     return
 
 while not done:
 
@@ -131,6 +188,34 @@ while not done:
         # Set the speed based on the key pressed
         # We want the speed to be enough that we move a full
         # segment, plus the margin.
+
+        #JOY STICK CONTROL
+        # while intro:
+        #     pass
+        #     #Passing in intro parameter, Start with GreenButton Lit, and Redbutton Unlit
+        #     #game_intro(intro, True, False)
+        for i in range(hats):
+            hat = joystick.get_hat(i)
+            if hat[0] == 1:
+                x_change = (segment_width + segment_margin)
+                y_change = 0
+            if hat[0] == -1:
+                x_change = (segment_width + segment_margin) * -1
+                y_change = 0
+            if hat[1] == 1:
+                x_change = 0
+                y_change = (segment_height + segment_margin) * -1
+            if hat[1] == -1:
+                x_change = 0
+                y_change = (segment_height + segment_margin)
+        #Joystick Pause
+        for i in range(buttons):
+            button = joystick.get_button(i)
+            tuple = (i, button)
+            if tuple == (7, 1):
+                pygame.time.wait(1)
+                paused()
+        #------------------------------------
         move = 0
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
@@ -158,6 +243,7 @@ while not done:
             if event.type == pygame.constants.USEREVENT:
                 pygame.mixer.music.load('naruto.wav')
                 pygame.mixer.music.play()
+
 
     # Get rid of last segment of the snake
     # .pop() command removes last item in list
@@ -192,7 +278,7 @@ while not done:
     screen.fill(RED)
 
     #TEXT
-
+    textToScreen(str(hat))
 
     #Drawing Sprites
     allspriteslist.draw(screen)
