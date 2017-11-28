@@ -92,6 +92,36 @@ pygame.mixer.music.load('naruto.wav')
 pygame.mixer.music.set_endevent(pygame.constants.USEREVENT)
 pygame.mixer.music.play()
 
+def textToScreen(str):
+    basicfont = pygame.font.SysFont('Arial', 48)
+    basicfont.render
+    text = basicfont.render(str, True, WHITE, BLACK)
+    textrect = text.get_rect()
+    textrect.centerx = screen.get_rect().centerx
+    textrect.centery = screen.get_rect().centery
+    screen.blit(text, textrect)
+
+def paused():
+    paused = True
+    pygame.mixer.music.pause
+    while paused:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_c:
+                    paused = False
+                    pygame.mixer.music.unpause
+                elif event.key == pygame.K_q:
+                    pygame.quit()
+                    quit()
+        screen.fill(WHITE)
+        textToScreen("PAUSED: Press C To Resume")
+        pygame.display.update()
+        clock.tick(5)
+
+
 while not done:
 
     for event in pygame.event.get():
@@ -101,6 +131,7 @@ while not done:
         # Set the speed based on the key pressed
         # We want the speed to be enough that we move a full
         # segment, plus the margin.
+        move = 0
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 x_change = (segment_width + segment_margin) * -1
@@ -114,6 +145,8 @@ while not done:
             if event.key == pygame.K_DOWN:
                 x_change = 0
                 y_change = (segment_height + segment_margin)
+            if event.key == pygame.K_p:
+                paused()
             if event.key == pygame.K_EQUALS:
                 for i in range(1):
                     x = (random.randint(0, width_screen)) - (segment_width + segment_margin) * i
@@ -159,13 +192,7 @@ while not done:
     screen.fill(RED)
 
     #TEXT
-    basicfont = pygame.font.SysFont('Arial', 48)
-    basicfont.render
-    text = basicfont.render('Hello World!', True, WHITE, BLACK)
-    textrect = text.get_rect()
-    textrect.centerx = screen.get_rect().centerx
-    textrect.centery = screen.get_rect().centery
-    screen.blit(text, textrect)
+
 
     #Drawing Sprites
     allspriteslist.draw(screen)
