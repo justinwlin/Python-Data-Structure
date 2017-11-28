@@ -156,4 +156,10 @@ while not done:
     #Pixel Location of Score
     s.blit(t, (10, 10))
 
+    font = pygame.font.SysFont('Arial', 20)
+    # -- Draw everything
+    t = font.render("Score: " + str(score), True, BLACK)
+    #Pixel Location of Score
+    s.blit(t, (30, 30))
+
     pygame.display.update()
