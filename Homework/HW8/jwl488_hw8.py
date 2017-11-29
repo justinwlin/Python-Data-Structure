@@ -196,13 +196,9 @@ class BinarySearchTreeMap:
             yield from self.subtree_preorder(curr_root.right)
 
     def get_ith_smallest(self, i):
-        testing = (sys._getframe().f_back.f_code)
-        lines = inspect.getsourcelines(testing)
-        print("".join(lines[0]))
-        
         root = self.root
         if i > len(self) or i == 0:
-            return IndexError
+            raise IndexError
         else:
             stack = [] * i
             while True:

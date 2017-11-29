@@ -1,7 +1,48 @@
-import pygame, random
+'''
+Design a homescreen
+Design a Death Screen
+Put Variable and Background name on screen
+Allow changing background/color of background
 
+Work on images for tutorial and how it will be drafted
+
+Ideal Setup:
+Game Intro screen:
+Instructions:
+- Start Game
+- Quit Game
+
+>>Loads into the beginning Sequence:
+HI My Name is SNAKE
+
+>> Asks User to interact:
+Help me eat?
+
+Yes or no?
+
+If no... :::((.
+If yes... Begins the tutorial...
+
+>> Loads into an intro scene:
+First I need to be created:
+
+...
+
+...
+
+...
+
+Once done:
+Leads to starting the game with all the possibility to change.
+
+'''
+
+import pygame, random, sys, os
 # --- Globals ---
 # Colors
+if not True:
+    import codecs
+    
 WHITE = (255, 255, 255)
 GREEN = (78, 255, 87)
 YELLOW = (241, 255, 0)
@@ -15,9 +56,12 @@ GREENBUTTON = (78, 200, 87)
 bright_red = (255,0,0)
 bright_green = (0,255,0)
 
+# Call this function so the Pygame library can initialize itself
+pygame.init()
+
 # Set the width and height of each snake segment
-segment_width = 15
-segment_height = 15
+segment_width = 10
+segment_height = 10
 # Margin between each segment
 segment_margin = 3
 
@@ -25,9 +69,18 @@ segment_margin = 3
 x_change = segment_width + segment_margin
 y_change = 0
 
+#Set up initial direction:
+dir = 1 #0 = up, 1 = right, 2 = down, 3 = left
+
 #Set initial score
 score = 0
 
+#Set up a clock
+appleClock = 0
+clockTick = 5
+
+#Font:
+FONT = "Fonts/snakeFont.ttf"
 
 class Segment(pygame.sprite.Sprite):
     """ Class to represent one segment of the snake. """
@@ -40,7 +93,7 @@ class Segment(pygame.sprite.Sprite):
 
         # Set height, width
         self.image = pygame.Surface([segment_width, segment_height])
-        self.image.fill(WHITE)
+        self.image.fill(BLACK)
 
         # Make our top-left corner the passed-in location.
         self.rect = self.image.get_rect()
@@ -58,27 +111,25 @@ class APPLE(pygame.sprite.Sprite):
 
         # Set height, width
         self.image = pygame.Surface([segment_width, segment_height])
-        self.image.fill(BLUE)
+        self.image.fill(RED)
 
         # Make our top-left corner the passed-in location.
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
 
-# Call this function so the Pygame library can initialize itself
-pygame.init()
 
 #Joystick
-
 # Create an 800x600 sized screen
-height_screen = 600
-width_screen = 800
+height_screen = 320
+width_screen = 480
 screen = pygame.display.set_mode([width_screen, height_screen])
 
 # Set the title of the window
 pygame.display.set_caption('Snake Example')
 
 allspriteslist = pygame.sprite.Group()
+snakespritelist = pygame.sprite.Group()
 applespriteslist = pygame.sprite.Group()
 
 # Create an initial snake
@@ -90,18 +141,24 @@ for i in range(lengthSnake):
     y = 30
     segment = Segment(x, y)
     snake_segments.append(segment)
+    snakespritelist.add(segment)
     allspriteslist.add(segment)
 
 clock = pygame.time.Clock()
+AppleClock = pygame.time.Clock()
 done = False
 
+#Setting up Background:
+#Initializing Images
+blueBG = pygame.image.load("Images/Small-mario.png").convert()
+
 #Setting Music
-pygame.mixer.music.load('naruto.wav')
+pygame.mixer.music.load('Music/naruto.wav')
 pygame.mixer.music.set_endevent(pygame.constants.USEREVENT)
 pygame.mixer.music.play()
 
 def textToScreen(str):
-    basicfont = pygame.font.SysFont('Arial', 48)
+    basicfont = pygame.font.SysFont(FONT, 48)
     basicfont.render
     text = basicfont.render(str, True, WHITE, BLACK)
     textrect = text.get_rect()
@@ -110,24 +167,28 @@ def textToScreen(str):
     screen.blit(text, textrect)
 
 #initialize Joystick
-joystick_count = pygame.joystick.get_count()
+joystickExist = False
+if pygame.joystick.get_count() >= 1:
+    joystickExist = True
+    joystick_count = pygame.joystick.get_count()
 
-# For each joystick:
-for i in range(joystick_count):
-    joystick = pygame.joystick.Joystick(i)
-    joystick.init()
+    # For each joystick:
+    for i in range(joystick_count):
+        joystick = pygame.joystick.Joystick(i)
+        joystick.init()
 
-buttons = joystick.get_numbuttons()
-hats = joystick.get_numhats()
+    buttons = joystick.get_numbuttons()
+    hats = joystick.get_numhats()
 
 #Pausing Game
 def paused():
     paused = True
     while paused:
-        for k in range(buttons):
-            newbutton = joystick.get_button(k)
-            if newbutton == 1 and (k == 0 or k == 1 or k == 2 or k == 3):
-                paused = False
+        if joystickExist:
+            for k in range(buttons):
+                newbutton = joystick.get_button(k)
+                if newbutton == 1 and (k == 0 or k == 1 or k == 2 or k == 3):
+                    paused = False
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -139,47 +200,37 @@ def paused():
                     pygame.quit()
                     quit()
         screen.fill(WHITE)
-        textToScreen("PAUSED: Press a Letter Button To Resume")
+        textToScreen("PAUSED")
         pygame.display.update()
         clock.tick(5)
 
+#Die Function
+def die(screen, score):
+    f = pygame.font.SysFont(FONT, 30)
+    t = f.render('Your score was: ' + str(score), True, (0, 0, 0))
+    screen.blit(t, (10, 270))
+    pygame.display.update()
+    pygame.time.wait(2000)
+    sys.exit(0)
 
-# def game_intro(intro, brightGreen, brightRed):
-#     while intro:
-#         for event in pygame.event.get():
-#             # print(event)
-#             if event.type == pygame.QUIT:
-#                 pygame.quit()
-#                 quit()
-#
-#         screen.fill(WHITE)
-#         largeText = pygame.font.Font('freesansbold.ttf', 115)
-#         textToScreen("A bit Racey" + str(brightGreen)+ str(brightRed))
-#         for i in range(hats):
-#             hat = joystick.get_hat(i)
-#             if hat[0] == -1:
-#                 brightGreen = True
-#                 brightRed = False
-#             if hat[0] == 1:
-#                 brightGreen = False
-#                 brightRed = True
-#         if brightGreen is True:
-#             pygame.draw.rect(screen, bright_green, (150, 450, 100, 50))
-#             pygame.draw.rect(screen, RED, (550, 450, 100, 50))
-#         else:
-#             pygame.draw.rect(screen, GREENBUTTON, (150, 450, 100, 50))
-#             pygame.draw.rect(screen, bright_red, (550, 450, 100, 50))
-#
-#         for k in range(buttons):
-#             newbutton = joystick.get_button(k)
-#             if newbutton == 1 and (k == 0 or k == 1 or k == 2 or k == 3):
-#                 intro = False
-#
-#         pygame.display.update()
-#         clock.tick(15)
-#     return
+def start():
+    start = True
+    while start:
+        pass
+
 
 while not done:
+
+    #CLOCK
+    appleClock += 1
+    if appleClock % 10 == 0:
+        appleClock = 0
+        x = (random.randint(0, width_screen)) - (segment_width + segment_margin) * i
+        y = (random.randint(0, height_screen)) - (segment_width + segment_margin) * i
+        apple = APPLE(x, y)
+        apple_segments.append(apple)
+        allspriteslist.add(apple)
+        applespriteslist.add(apple)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -194,52 +245,57 @@ while not done:
         #     pass
         #     #Passing in intro parameter, Start with GreenButton Lit, and Redbutton Unlit
         #     #game_intro(intro, True, False)
-        for i in range(hats):
-            hat = joystick.get_hat(i)
-            if hat[0] == 1:
-                x_change = (segment_width + segment_margin)
-                y_change = 0
-            if hat[0] == -1:
-                x_change = (segment_width + segment_margin) * -1
-                y_change = 0
-            if hat[1] == 1:
-                x_change = 0
-                y_change = (segment_height + segment_margin) * -1
-            if hat[1] == -1:
-                x_change = 0
-                y_change = (segment_height + segment_margin)
-        #Joystick Pause
-        for i in range(buttons):
-            button = joystick.get_button(i)
-            tuple = (i, button)
-            if tuple == (7, 1):
-                pygame.time.wait(1)
-                paused()
+        if joystickExist:
+            for i in range(hats):
+                hat = joystick.get_hat(i)
+                if hat[0] == 1:
+                    x_change = (segment_width + segment_margin)
+                    y_change = 0
+                if hat[0] == -1:
+                    x_change = (segment_width + segment_margin) * -1
+                    y_change = 0
+                if hat[1] == 1:
+                    x_change = 0
+                    y_change = (segment_height + segment_margin) * -1
+                if hat[1] == -1:
+                    x_change = 0
+                    y_change = (segment_height + segment_margin)
+            #Joystick Pause
+            for i in range(buttons):
+                button = joystick.get_button(i)
+                tuple = (i, button)
+                if tuple == (7, 1):
+                    pygame.time.wait(1)
+                    paused()
         #------------------------------------
         move = 0
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
+            if event.key == pygame.K_LEFT and dir != 1:
+                dir = 3
                 x_change = (segment_width + segment_margin) * -1
                 y_change = 0
-            if event.key == pygame.K_RIGHT:
+            if event.key == pygame.K_RIGHT and dir != 3:
+                dir = 1
                 x_change = (segment_width + segment_margin)
                 y_change = 0
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_UP and dir != 2:
+                dir = 0
                 x_change = 0
                 y_change = (segment_height + segment_margin) * -1
-            if event.key == pygame.K_DOWN:
+            if event.key == pygame.K_DOWN and dir != 0:
+                dir = 2
                 x_change = 0
                 y_change = (segment_height + segment_margin)
             if event.key == pygame.K_p:
                 paused()
+            if event.key == pygame.K_q:
+                pygame.quit()
+                quit()
             if event.key == pygame.K_EQUALS:
-                for i in range(1):
-                    x = (random.randint(0, width_screen)) - (segment_width + segment_margin) * i
-                    y = (random.randint(0, height_screen)) - (segment_width + segment_margin) * i
-                    apple = APPLE(x, y)
-                    apple_segments.append(apple)
-                    allspriteslist.add(apple)
-                    applespriteslist.add(apple)
+                clockTick += 1
+            if event.key == pygame.K_MINUS:
+                if clockTick != 1:
+                    clockTick -= 1
             if event.type == pygame.constants.USEREVENT:
                 pygame.mixer.music.load('naruto.wav')
                 pygame.mixer.music.play()
@@ -249,6 +305,7 @@ while not done:
     # .pop() command removes last item in list
     old_segment = snake_segments.pop()
     allspriteslist.remove(old_segment)
+    snakespritelist.remove(old_segment)
 
     # Figure out where new segment will be
     x = snake_segments[0].rect.x + x_change
@@ -258,7 +315,7 @@ while not done:
     # Insert new segment into the list
     snake_segments.insert(0, segment)
     allspriteslist.add(segment)
-
+    snakespritelist.add(segment)
     #Collision Detection with Apple Sprite:
     collide = False
     collide = pygame.sprite.spritecollide(snake_segments[0], applespriteslist, True)
@@ -270,16 +327,27 @@ while not done:
             segment = Segment(x, y)
             snake_segments.append(segment)
             allspriteslist.add(segment)
-    #Bounds the snake
+    #Collision with itself:
+    collide2 = False
+    head = snake_segments[0]
+    for i in range(1, len(snake_segments)):
+        if head.rect.x == snake_segments[i].rect.x and head.rect.y == snake_segments[i].rect.y:
+            die(screen, score)
+    for i in range(0, len(snake_segments)):
+        if head.rect.x > width_screen or head.rect.y > height_screen or head.rect.x < 0 or head.rect.y < 0:
+            die(screen,score)
+
 
     # -- Draw everything
 
     # Clear screen
-    screen.fill(RED)
+    screen.fill(WHITE)
 
+    #Background Image
+    screen.blit(blueBG, (0, 0))
     #TEXT
-    textToScreen(str(hat))
-
+    if joystickExist:
+        textToScreen(str(hat))
     #Drawing Sprites
     allspriteslist.draw(screen)
 
@@ -287,6 +355,6 @@ while not done:
     pygame.display.flip()
     pygame.display.update()
     # Pause
-    clock.tick(5)
+    clock.tick(clockTick)
 
 pygame.quit()
