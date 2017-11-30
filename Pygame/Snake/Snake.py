@@ -219,10 +219,11 @@ def main():
     def die(screen, score):
         dead = True
         while dead:
-            f = pygame.font.SysFont(FONT, 30)
-            t = f.render('Your score was: ' + str(score), True, (0, 0, 0))
-
-            screen.blit(t, (10, 270))
+            createTextSize("You score was: " + str(score), 30, 10, 270)
+            # f = pygame.font.SysFont(FONT, 30)
+            # t = f.render('Your score was: ' + str(score), True, (0, 0, 0))
+            #
+            # screen.blit(t, (10, 270))
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
