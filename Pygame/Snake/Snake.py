@@ -230,7 +230,6 @@ def main():
                     quit()
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_c:
-                        print("hi")
                         # start = False
                     if event.key == pygame.K_q:
                         pygame.quit()
@@ -249,7 +248,6 @@ def main():
             t = f.render('Your score was: ' + str(score), True, (0, 0, 0))
 
             if event.type == pygame.KEYDOWN:
-                print("hi")
                 if event.key == pygame.K_c:
                     createText("press c to continue", width_screen / 2, height_screen / 2)
                     dead = False
@@ -282,8 +280,6 @@ def main():
                 for k in range(buttons):
                     newbutton = joystick.get_button(k)
                     if newbutton == 1 and (k == 0):
-                        print("hi")
-                        print(left)
                         if left is True:
                             start = False
                 for i in range(hats):
@@ -301,8 +297,6 @@ def main():
                     quit()
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_c:
-
-                        print("hi")
                         #start = False
                     if event.key == pygame.K_RIGHT:
                         colorRight = bright_red
@@ -388,7 +382,6 @@ def main():
                     newbutton = joystick.get_button(k)
                     #k is the button number
                     if newbutton == 1 and (k == 5):
-                        print("trigger")
                         clockTick += 1
                     if newbutton == 1 and k == 4:
                         clockTick -= 1
