@@ -218,7 +218,7 @@ def main():
     #Die Function
     def die(screen, score):
         dead = True
-        while start:
+        while dead:
             f = pygame.font.SysFont(FONT, 30)
             t = f.render('Your score was: ' + str(score), True, (0, 0, 0))
 
@@ -230,7 +230,7 @@ def main():
                     quit()
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_c:
-                        # start = False
+                        start = False
                     if event.key == pygame.K_q:
                         pygame.quit()
                         quit()
@@ -297,7 +297,7 @@ def main():
                     quit()
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_c:
-                        #start = False
+                        start = False
                     if event.key == pygame.K_RIGHT:
                         colorRight = bright_red
                         colorLeft = GREENBUTTON
@@ -357,25 +357,6 @@ def main():
                         x_change = 0
                         y_change = (segment_height + segment_margin) * 1
 
-                    # if hat[0] == 1:
-                    #     print("right")
-                    #     #right
-                    #     x_change = (segment_width + segment_margin)
-                    #     y_change = 0
-                    # if hat[0] == -1 and dir == 3 and dir == 2 and dir == 1:
-                    #     #left
-                    #     x_change = (segment_width + segment_margin) * -1
-                    #     y_change = 0
-                    # if hat[1] == 1:
-                    #     #up
-                    #     print("up")
-                    #     x_change = 0
-                    #     y_change = (segment_height + segment_margin) * -1
-                    # if hat[1] == -1:
-                    #     #down
-                    #     print("down")
-                    #     x_change = 0
-                    #     y_change = (segment_height + segment_margin)
                 #Joystick Pause
 
                 for k in range(buttons):
