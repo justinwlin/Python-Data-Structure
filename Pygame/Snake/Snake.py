@@ -42,7 +42,7 @@ import pygame, random, sys, os
 # Colors
 if not True:
     import codecs
-    
+
 WHITE = (255, 255, 255)
 GREEN = (78, 255, 87)
 YELLOW = (241, 255, 0)
@@ -74,6 +74,9 @@ dir = 1 #0 = up, 1 = right, 2 = down, 3 = left
 
 #Set initial score
 score = 0
+
+#Sets up Speed
+speed = 1
 
 #Set up a clock
 appleClock = 0
@@ -151,9 +154,22 @@ done = False
 #Setting up Background:
 #Initializing Images
 blueBG = pygame.image.load("Images/Small-mario.png").convert()
+introBG = pygame.image.load("Images/introBGTest.jpg").convert()
+
+BGlist = []
+BGlist.append((introBG, "Test1"))
+BGlist.append((blueBG, "Test2"))
+BGindex = 0
+
+#Music List
+BGmusic = []
+BGmusic.append('Music/angel.wav')
+BGmusic.append('Music/naruto.wav')
+BGmusicindex = 0
+
 
 #Setting Music
-pygame.mixer.music.load('Music/naruto.wav')
+pygame.mixer.music.load(BGmusic[BGmusicindex])
 pygame.mixer.music.set_endevent(pygame.constants.USEREVENT)
 pygame.mixer.music.play()
 
@@ -166,6 +182,17 @@ def textToScreen(str):
     textrect.centery = screen.get_rect().centery
     screen.blit(text, textrect)
 
+def createText(str, x, y):
+    basicFont = pygame.font.SysFont(FONT, 24)
+    basicFont.render
+    text = basicFont.render(str, True, BLACK)
+    screen.blit(text, (x, y))
+
+def createbutton(color, x, y):
+    widthButton = 100
+    heightButton = 50
+
+    rect = pygame.draw.rect(screen, color, [x,y, widthButton, heightButton])
 #initialize Joystick
 joystickExist = False
 if pygame.joystick.get_count() >= 1:
@@ -199,6 +226,7 @@ def paused():
                 elif event.key == pygame.K_q:
                     pygame.quit()
                     quit()
+
         screen.fill(WHITE)
         textToScreen("PAUSED")
         pygame.display.update()
@@ -215,15 +243,55 @@ def die(screen, score):
 
 def start():
     start = True
+    right = False
+    left = True
+
+    colorLeft = bright_green
+    colorRight = REDBUTTON
+
     while start:
-        pass
+        screen.fill(RED)
+        screen.blit(introBG, (0, 0))
+
+        createbutton(colorLeft, width_screen / 6, height_screen / 4 * 3)
+        createbutton(colorRight, width_screen / 6 * 4, height_screen / 4 * 3)
+
+        #pygame.draw.rect(screen, GREENBUTTON, [width_screen / 6, height_screen / 10 * 7, 100, 50])
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_c:
+
+                    print("hi")
+                    #start = False
+                if event.key == pygame.K_RIGHT:
+                    colorRight = bright_red
+                    colorLeft = GREENBUTTON
+                if event.key == pygame.K_LEFT:
+                    colorLeft = bright_green
+                    colorRight = REDBUTTON
+                if event.key == pygame.K_c:
+                    start = False
+
+        pygame.display.update()
+        clock.tick(20)
 
 
+gameStart = True
+gameIntro = True
 while not done:
+    screen.fill(WHITE)
+    screen.blit(BGlist[BGindex][0], (0, 0))
+    # Clear screen
+    if gameStart:
+        start()
+        gameStart = False
 
     #CLOCK
     appleClock += 1
-    if appleClock % 10 == 0:
+    if appleClock % (clockTick * 2)== 0:
         appleClock = 0
         x = (random.randint(0, width_screen)) - (segment_width + segment_margin) * i
         y = (random.randint(0, height_screen)) - (segment_width + segment_margin) * i
@@ -236,15 +304,6 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
 
-        # Set the speed based on the key pressed
-        # We want the speed to be enough that we move a full
-        # segment, plus the margin.
-
-        #JOY STICK CONTROL
-        # while intro:
-        #     pass
-        #     #Passing in intro parameter, Start with GreenButton Lit, and Redbutton Unlit
-        #     #game_intro(intro, True, False)
         if joystickExist:
             for i in range(hats):
                 hat = joystick.get_hat(i)
@@ -268,7 +327,6 @@ while not done:
                     pygame.time.wait(1)
                     paused()
         #------------------------------------
-        move = 0
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT and dir != 1:
                 dir = 3
@@ -296,13 +354,20 @@ while not done:
             if event.key == pygame.K_MINUS:
                 if clockTick != 1:
                     clockTick -= 1
+            if event.key == pygame.K_l: #Controls changing the background
+                if BGindex != len(BGlist) - 1:
+                    BGindex += 1
+                else:
+                    BGindex = 0
+            if event.key == pygame.K_o:
+                pygame.mixer.music.stop()
+                BGmusicindex += 1
             if event.type == pygame.constants.USEREVENT:
-                pygame.mixer.music.load('naruto.wav')
+                pygame.mixer.music.load(BGmusic[BGmusicindex])
                 pygame.mixer.music.play()
 
 
-    # Get rid of last segment of the snake
-    # .pop() command removes last item in list
+    # Get rid of last segment of the snake .pop() command removes last item in list
     old_segment = snake_segments.pop()
     allspriteslist.remove(old_segment)
     snakespritelist.remove(old_segment)
@@ -319,6 +384,7 @@ while not done:
     #Collision Detection with Apple Sprite:
     collide = False
     collide = pygame.sprite.spritecollide(snake_segments[0], applespriteslist, True)
+
     if collide:
         score += 1
         for i in range(1):
@@ -340,14 +406,16 @@ while not done:
 
     # -- Draw everything
 
-    # Clear screen
-    screen.fill(WHITE)
 
     #Background Image
-    screen.blit(blueBG, (0, 0))
+    #screen.blit(blueBG, (0, 0))
     #TEXT
     if joystickExist:
         textToScreen(str(hat))
+
+    createText("Speed: " + str(clockTick), 5, 0)
+    createText("Music: " + str(), 5, 20)
+
     #Drawing Sprites
     allspriteslist.draw(screen)
 

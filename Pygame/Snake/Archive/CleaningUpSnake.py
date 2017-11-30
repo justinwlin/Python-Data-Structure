@@ -91,6 +91,7 @@ pygame.mixer.music.play()
 #GAME UPDATE
 while not done:
     clock.tick(clockSpeed)
+    pygame.draw.ellipse(s, BLUE, [100, 100, 200, 50])
     for e in pygame.event.get():
         if e.type == KEYDOWN:
             if e.key == K_UP and dirs != 0:
