@@ -122,8 +122,8 @@ def main():
     introBG = pygame.image.load("Images/introBGTest.jpg").convert()
 
     BGlist = []
-    BGlist.append((introBG, "Test1"))
-    BGlist.append((blueBG, "Test2"))
+    BGlist.append((blueBG, "Test1"))
+    BGlist.append((introBG, "Test2"))
     BGindex = 0
 
     #Music List
@@ -278,22 +278,22 @@ def main():
             createTextSize("Start", 48 ,width_screen / 6 + 10, height_screen / 4 * 3 + 10)
             createTextSize("ABOUT", 40, width_screen / 6 * 4 + 1, height_screen / 4 * 3 + 15)
             #pygame.draw.rect(screen, GREENBUTTON, [width_screen / 6, height_screen / 10 * 7, 100, 50])
-
-            for k in range(buttons):
-                newbutton = joystick.get_button(k)
-                if newbutton == 1 and (k == 0):
-                    print("hi")
-                    print(left)
-                    if left is True:
-                        start = False
-            for i in range(hats):
-                hat = joystick.get_hat(i)
-                if hat[0] == 1:
-                    colorRight = bright_red
-                    colorLeft = GREENBUTTON
-                if hat[0] == -1:
-                    colorLeft = bright_green
-                    colorRight = REDBUTTON
+            if joystickExist:
+                for k in range(buttons):
+                    newbutton = joystick.get_button(k)
+                    if newbutton == 1 and (k == 0):
+                        print("hi")
+                        print(left)
+                        if left is True:
+                            start = False
+                for i in range(hats):
+                    hat = joystick.get_hat(i)
+                    if hat[0] == 1:
+                        colorRight = bright_red
+                        colorLeft = GREENBUTTON
+                    if hat[0] == -1:
+                        colorLeft = bright_green
+                        colorRight = REDBUTTON
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -344,26 +344,55 @@ def main():
 
             if joystickExist:
                 for i in range(hats):
+                    # 0 = up, 1 = right, 2 = down, 3 = left
                     hat = joystick.get_hat(i)
-                    if hat[0] == 1:
-                        x_change = (segment_width + segment_margin)
-                        y_change = 0
-                    if hat[0] == -1:
+                    if hat[0] == -1 and dir != 1:
+                        dir = 3
                         x_change = (segment_width + segment_margin) * -1
                         y_change = 0
-                    if hat[1] == 1:
+                    if hat[0] == 1 and dir != 3:
+                        dir = 1
+                        x_change = (segment_width + segment_margin)
+                        y_change = 0
+                    if hat[1] == 1 and dir != 2:
+                        dir = 0
                         x_change = 0
                         y_change = (segment_height + segment_margin) * -1
-                    if hat[1] == -1:
+                    if hat[1] == -1 and dir != 0:
+                        dir = 2
                         x_change = 0
-                        y_change = (segment_height + segment_margin)
+                        y_change = (segment_height + segment_margin) * 1
+
+                    # if hat[0] == 1:
+                    #     print("right")
+                    #     #right
+                    #     x_change = (segment_width + segment_margin)
+                    #     y_change = 0
+                    # if hat[0] == -1 and dir == 3 and dir == 2 and dir == 1:
+                    #     #left
+                    #     x_change = (segment_width + segment_margin) * -1
+                    #     y_change = 0
+                    # if hat[1] == 1:
+                    #     #up
+                    #     print("up")
+                    #     x_change = 0
+                    #     y_change = (segment_height + segment_margin) * -1
+                    # if hat[1] == -1:
+                    #     #down
+                    #     print("down")
+                    #     x_change = 0
+                    #     y_change = (segment_height + segment_margin)
                 #Joystick Pause
-                for i in range(buttons):
-                    button = joystick.get_button(i)
-                    tuple = (i, button)
-                    if tuple == (7, 1):
-                        pygame.time.wait(1)
-                        paused()
+
+                for k in range(buttons):
+                    newbutton = joystick.get_button(k)
+                    #k is the button number
+                    if newbutton == 1 and (k == 5):
+                        print("trigger")
+                        clockTick += 1
+                    if newbutton == 1 and k == 4:
+                        clockTick -= 1
+
             #------------------------------------
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT and dir != 1:
