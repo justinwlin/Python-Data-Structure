@@ -167,6 +167,17 @@ BGmusic.append('Music/angel.wav')
 BGmusic.append('Music/naruto.wav')
 BGmusicindex = 0
 
+#Music Name:
+BGmusicname = []
+BGmusicname.append("Angel Beats")
+BGmusicname.append("Naruto")
+
+#BG Name:
+BGname = []
+BGname.append("Test1")
+BGname.append("Test2")
+
+
 
 #Setting Music
 pygame.mixer.music.load(BGmusic[BGmusicindex])
@@ -187,6 +198,13 @@ def createText(str, x, y):
     basicFont.render
     text = basicFont.render(str, True, BLACK)
     screen.blit(text, (x, y))
+
+def createTextSize(str, size, x, y):
+    basicFont = pygame.font.SysFont(FONT, size)
+    basicFont.render
+    text = basicFont.render(str, True, BLACK)
+    screen.blit(text, (x, y))
+
 
 def createbutton(color, x, y):
     widthButton = 100
@@ -256,6 +274,8 @@ def start():
         createbutton(colorLeft, width_screen / 6, height_screen / 4 * 3)
         createbutton(colorRight, width_screen / 6 * 4, height_screen / 4 * 3)
 
+        createTextSize("Start", 48 ,width_screen / 6 + 10, height_screen / 4 * 3 + 10)
+        createTextSize("ABOUT", 40, width_screen / 6 * 4 + 1, height_screen / 4 * 3 + 15)
         #pygame.draw.rect(screen, GREENBUTTON, [width_screen / 6, height_screen / 10 * 7, 100, 50])
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -361,7 +381,12 @@ while not done:
                     BGindex = 0
             if event.key == pygame.K_o:
                 pygame.mixer.music.stop()
-                BGmusicindex += 1
+                if BGmusicindex == len(BGmusic) -1:
+                    BGmusicindex = 0
+                else:
+                    BGmusicindex += 1
+                pygame.mixer.music.load(BGmusic[BGmusicindex])
+                pygame.mixer.music.play()
             if event.type == pygame.constants.USEREVENT:
                 pygame.mixer.music.load(BGmusic[BGmusicindex])
                 pygame.mixer.music.play()
@@ -414,7 +439,8 @@ while not done:
         textToScreen(str(hat))
 
     createText("Speed: " + str(clockTick), 5, 0)
-    createText("Music: " + str(), 5, 20)
+    createText("Music: " + str(BGmusicname[BGmusicindex]), 5, 20)
+    createText("BG: " + str(BGname[BGindex]), 5, 40)
 
     #Drawing Sprites
     allspriteslist.draw(screen)
