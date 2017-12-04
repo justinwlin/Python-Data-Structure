@@ -313,7 +313,6 @@ def add_items(bst, low, high):
 
 def create_complete_bst(n):
     bst = BinarySearchTreeMap()
-    test = n + 1
     add_items(bst, 1, n)
     return bst
 #===================================

@@ -47,6 +47,10 @@ def main():
     appleClock = 0
     clockTick = 5
 
+    #Event Control Booleans
+    oneEvent = True
+    threeEvent = True
+    fiveEvent = True
     #Font:
     FONT = "Fonts/snakeFont.ttf"
 
@@ -118,22 +122,29 @@ def main():
 
     #Setting up Background:
     #Initializing Images
-    blueBG = pygame.image.load("Images/Small-mario.png").convert()
-    introBG = pygame.image.load("Images/introBGTest.jpg").convert()
+    blueBG = pygame.image.load("Images/bluebackground.jpg").convert()
+    purpleBG = pygame.image.load("Images/Purple_BG.png").convert()
+    tealBG = pygame.image.load("Images/Teal_BG.png").convert()
+    whiteBG = pygame.image.load("Images/White_BG.png").convert()
+    introBG = pygame.image.load("Images/Intro_Screen.png").convert()
 
     BGlist = []
-    BGlist.append((blueBG, "Test1"))
-    BGlist.append((introBG, "Test2"))
+    BGlist.append((purpleBG, "NYU"))
+    BGlist.append((blueBG, "Blue"))
+    BGlist.append((tealBG, "Teal"))
+    BGlist.append((whiteBG, "White"))
     BGindex = 0
 
     #Music List
     BGmusic = []
+    BGmusic.append('Music/pallet_town.wav')
     BGmusic.append('Music/angel.wav')
     BGmusic.append('Music/naruto.wav')
     BGmusicindex = 0
 
     #Music Name:
     BGmusicname = []
+    BGmusicname.append("Pallet Town")
     BGmusicname.append("Angel Beats")
     BGmusicname.append("Naruto")
 
@@ -170,6 +181,11 @@ def main():
         text = basicFont.render(str, True, BLACK)
         screen.blit(text, (x, y))
 
+    def createTextSizeBG(str, size, background, x, y):
+        basicFont = pygame.font.SysFont(FONT, size)
+        basicFont.render
+        text = basicFont.render(str, True, BLACK, background)
+        screen.blit(text, (x, y))
 
     def createbutton(color, x, y):
         widthButton = 100
@@ -219,12 +235,15 @@ def main():
     def die(screen, score):
         dead = True
         while dead:
-            createTextSize("You score was: " + str(score), 30, 10, 270)
+            createText("You score was: " + str(score), 10, 270)
             # f = pygame.font.SysFont(FONT, 30)
             # t = f.render('Your score was: ' + str(score), True, (0, 0, 0))
-            #
-            # screen.blit(t, (10, 270))
-
+            if joystickExist:
+                for k in range(buttons):
+                    newbutton = joystick.get_button(k)
+                    if newbutton == 1 and (k == 0):
+                        pygame.time.wait(100)
+                        dead = False
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -238,24 +257,6 @@ def main():
                     if event.key == pygame.K_c:
                         return
 
-            pygame.display.update()
-            clock.tick(20)
-
-
-
-        dead = True
-        while dead:
-            f = pygame.font.SysFont(FONT, 30)
-            t = f.render('Your score was: ' + str(score), True, (0, 0, 0))
-
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_c:
-                    createText("press c to continue", width_screen / 2, height_screen / 2)
-                    dead = False
-                if event.key == pygame.K_q or pygame.K_ESCAPE:
-                    pygame.quit()
-                    quit()
-            screen.blit(t, (10, 270))
             pygame.display.update()
             clock.tick(20)
 
@@ -283,14 +284,22 @@ def main():
                     if newbutton == 1 and (k == 0):
                         if left is True:
                             start = False
+                    if newbutton == 1 and k == 0:
+                        if left is False:
+                            pygame.time.delay(400)
+                            about()
                 for i in range(hats):
                     hat = joystick.get_hat(i)
                     if hat[0] == 1:
                         colorRight = bright_red
                         colorLeft = GREENBUTTON
+                        left = False
+                        right = True
                     if hat[0] == -1:
                         colorLeft = bright_green
                         colorRight = REDBUTTON
+                        left = True
+                        right = False
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -310,7 +319,139 @@ def main():
 
             pygame.display.update()
             clock.tick(20)
+    def about():
+        event1 = True
+        string = "Congrats you just captured your first apple!"
+        counter = 0
+        slide1 = pygame.image.load("Images/AboutUs.png").convert()
+        slideList = [slide1]
+        slideIndex = 0
 
+        while event1:
+            screen.fill(WHITE)
+            if slideIndex == len(slideList):
+                return
+            screen.blit(slideList[slideIndex], (0, 0))
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_c:
+                        return
+            for k in range(buttons):
+                newbutton = joystick.get_button(k)
+                #k is the button number
+                if newbutton == 1 and (k == 0):
+                    print("ESCAPE!")
+                    event1 = False
+                    pygame.time.delay(400)
+            pygame.display.update()
+            clock.tick(20)
+
+    def apple_one_event():
+        event1 = True
+        string = "Congrats you just captured your first apple!"
+        counter = 0
+        slide1 = pygame.image.load("Images/Apple_One_Slide_One.jpg").convert()
+        slide2 = pygame.image.load("Images/Apple_One_Slide_Two.jpg").convert()
+        slide3 = pygame.image.load("Images/Apple_One_Slide_Three.jpg").convert()
+        slide4 = pygame.image.load("Images/Apple_One_Slide_Four.jpg").convert()
+        slideList = [slide1, slide2, slide3, slide4]
+        slideIndex = 0
+
+        while event1:
+            screen.fill(WHITE)
+            if slideIndex == len(slideList):
+                return
+            screen.blit(slideList[slideIndex], (0, 0))
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_c:
+                        if slideIndex < len(slideList):
+                            slideIndex += 1
+                            pygame.time.delay(1)
+                        else:
+                            event1 = False
+            for k in range(buttons):
+                newbutton = joystick.get_button(k)
+                #k is the button number
+                if newbutton == 1 and (k == 0) and score >= 1:
+                    slideIndex += 1
+                    pygame.time.delay(400)
+            pygame.display.update()
+            clock.tick(20)
+
+    def apple_three_event():
+        event1 = True
+
+        slide1 = pygame.image.load("Images/Apple_Three_Slide_One.jpg").convert()
+        slide2 = pygame.image.load("Images/Apple_Three_Slide_Two.jpg").convert()
+
+        slideList = [slide1, slide2]
+        slideIndex = 0
+
+        while event1:
+            screen.fill(WHITE)
+            if slideIndex == len(slideList):
+                return
+            screen.blit(slideList[slideIndex], (0, 0))
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_c:
+                        if slideIndex < len(slideList):
+                            slideIndex += 1
+                            pygame.time.delay(1)
+                        else:
+                            event1 = False
+            for k in range(buttons):
+                newbutton = joystick.get_button(k)
+                #k is the button number
+                if newbutton == 1 and (k == 0) and score >= 1:
+                    slideIndex += 1
+                    pygame.time.delay(400)
+            pygame.display.update()
+            clock.tick(20)
+
+    def apple_five_event():
+        event1 = True
+
+        slide1 = pygame.image.load("Images/Apple_Five_Slide_One.jpg").convert()
+        slide2 = pygame.image.load("Images/Apple_Five_Slide_Two.jpg").convert()
+
+        slideList = [slide1, slide2]
+        slideIndex = 0
+
+        while event1:
+            screen.fill(WHITE)
+            if slideIndex == len(slideList):
+                return
+            screen.blit(slideList[slideIndex], (0, 0))
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_c:
+                        if slideIndex < len(slideList):
+                            slideIndex += 1
+                            pygame.time.delay(1)
+                        else:
+                            event1 = False
+            for k in range(buttons):
+                newbutton = joystick.get_button(k)
+                #k is the button number
+                if newbutton == 1 and (k == 0) and score >= 1:
+                    slideIndex += 1
+                    pygame.time.delay(400)
+            pygame.display.update()
+            clock.tick(20)
 
     gameStart = True
     gameIntro = True
@@ -324,7 +465,8 @@ def main():
 
         #CLOCK
         appleClock += 1
-        if appleClock % (clockTick * 2)== 0:
+        #if appleClock % (clockTick * 2)== 0:
+        if appleClock % 10 == 0:
             appleClock = 0
             x = (random.randint(0, width_screen)) - (segment_width + segment_margin) * i
             y = (random.randint(0, height_screen)) - (segment_width + segment_margin) * i
@@ -363,10 +505,27 @@ def main():
                 for k in range(buttons):
                     newbutton = joystick.get_button(k)
                     #k is the button number
-                    if newbutton == 1 and (k == 5):
+                    if newbutton == 1 and (k == 5) and score >= 1:
                         clockTick += 1
-                    if newbutton == 1 and k == 4:
+                    if newbutton == 1 and k == 4 and score >= 1:
                         clockTick -= 1
+                    if newbutton == 1 and (k == 1)and score >= 3:
+                        pygame.time.delay(200)
+                        if BGindex != len(BGlist) - 1:
+                            print(len(BGlist))
+                            print(BGindex)
+                            BGindex += 1
+                        else:
+                            BGindex = 0
+                    if (newbutton == 1 and (k == 3)):#and score >= 5:
+                        pygame.time.delay(200)
+                        pygame.mixer.music.stop()
+                        if BGmusicindex == len(BGmusic) - 1:
+                            BGmusicindex = 0
+                        else:
+                            BGmusicindex += 1
+                        pygame.mixer.music.load(BGmusic[BGmusicindex])
+                        pygame.mixer.music.play()
 
             #------------------------------------
             if event.type == pygame.KEYDOWN:
@@ -400,6 +559,8 @@ def main():
                         clockTick -= 1
                 if event.key == pygame.K_l: #Controls changing the background
                     if BGindex != len(BGlist) - 1:
+                        print(len(BGlist))
+                        print(BGindex)
                         BGindex += 1
                     else:
                         BGindex = 0
@@ -456,15 +617,22 @@ def main():
 
 
         # -- Draw everything
-        if score == 1:
-            createText("Congrats! You just changed a variable!", 300, 30)
-
+        if score == 1 and oneEvent == True:
+            apple_one_event()
+            oneEvent = False
+        if score == 3 and threeEvent == True:
+            apple_three_event()
+            threeEvent = False
+        if score == 5 and fiveEvent == True:
+            apple_five_event()
+            fiveEvent = False
         #Background Image
         #screen.blit(blueBG, (0, 0))
         #TEXT
         createText("Speed: " + str(clockTick), 5, 0)
         createText("Music: " + str(BGmusicname[BGmusicindex]), 5, 20)
-        createText("BG: " + str(BGname[BGindex]), 5, 40)
+        createText("BG: " + str(BGlist[BGindex][1]), 5, 40)
+        createText("Score " + str(score), 5, 60)
 
         #Drawing Sprites
         allspriteslist.draw(screen)
