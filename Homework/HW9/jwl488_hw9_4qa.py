@@ -1,3 +1,7 @@
+import random
+import inspect
+import sys
+
 class BinarySearchTreeMap:
 
     class Item:
@@ -41,7 +45,7 @@ class BinarySearchTreeMap:
     def __getitem__(self, key):
         node = self.subtree_find(self.root, key)
         if (node is None):
-            raise KeyError(str(key) + " not found")
+            return None
         else:
             return node.item.value
 
@@ -214,204 +218,233 @@ class BinarySearchTreeMap:
             yield (node.item.key, node.item.value)
 
 
+class DoublyLinkedList:
+    class Node:
+        def __init__(self, data=None, next=None, prev=None):
+            self.data = data
+            self.next = next
+            self.prev = prev
 
-class Empty(Exception):
+        def disconnect(self):
+            self.data = None
+            self.next = None
+            self.prev = None
+
+
+    def __init__(self):
+        self.header = DoublyLinkedList.Node()
+        self.trailer = DoublyLinkedList.Node()
+        self.header.next = self.trailer
+        self.trailer.prev = self.header
+        self.size = 0
+
+    def __len__(self):
+        return self.size
+
+    def is_empty(self):
+        return (len(self) == 0)
+
+    def first_node(self):
+        if (self.is_empty()):
+            raise EmptyCollection("List is empty")
+        return self.header.next
+
+    def last_node(self):
+        if (self.is_empty()):
+            raise EmptyCollection("List is empty")
+        return self.trailer.prev
+
+    def add_first(self, elem):
+        return self.add_after(self.header, elem)
+
+    def add_last(self, elem):
+        return self.add_after(self.trailer.prev, elem)
+
+    def add_after(self, node, elem):
+        prev = node
+        succ = node.next
+        new_node = DoublyLinkedList.Node()
+        new_node.data = elem
+        new_node.prev = prev
+        new_node.next = succ
+        prev.next = new_node
+        succ.prev = new_node
+        self.size += 1
+        return new_node
+
+    def add_before(self, node, elem):
+        return self.add_after(node.prev, elem)
+
+    def delete(self, node):
+        prev = node.prev
+        succ = node.next
+        prev.next = succ
+        succ.prev = prev
+        self.size -= 1
+        data = node.data
+        node.disconnect()
+        return data
+
+    def __iter__(self):
+        if(self.is_empty()):
+            return
+        cursor = self.first_node()
+        while(cursor is not self.trailer):
+            yield cursor.data
+            cursor = cursor.next
+
+    def __str__(self):
+        return '[' + '<-->'.join([str(elem) for elem in self]) + ']'
+
+    def __repr__(self):
+        return str(self)
+
+
+class UnsortedArrayMap:
+    class Item:
+        def __init__(self, key, value=None):
+            self.key = key
+            self.value = value
+
+    def __init__(self):
+        self.table = []
+
+    def __len__(self):
+        return len(self.table)
+
+    def is_empty(self):
+        return (len(self) == 0)
+
+    def __getitem__(self, key):
+        for item in self.table:
+            if key == item.key:
+                return item.value
+        raise KeyError("Key Error: " + str(key))
+
+    def __setitem__(self, key, value):
+        for item in self.table:
+            if key == item.key:
+                item.value = value
+                return
+        self.table.append(UnsortedArrayMap.Item(key, value))
+
+    def __delitem__(self, key):
+        for j in range(len(self.table)):
+            if key == self.table[j].key:
+                self.table.pop(j)
+                return
+        raise KeyError("Key Error: " + str(key))
+
+    def __iter__(self):
+        for item in self.table:
+            yield item.key
+
+
+class ChainingHashTableMap:
+    def __init__(self, N=64, p=6460101079):
+        self.N = N
+        self.table = [None] * self.N
+        self.n = 0
+        self.p = p
+        self.a = random.randrange(1, self.p - 1)
+        self.b = random.randrange(0, self.p - 1)
+        self.dll = DoublyLinkedList()
+
+    def hash_function(self, k):
+        return ((self.a * hash(k) + self.b) % self.p) % self.N
+
+    def __len__(self):
+        return self.n
+
+    def __getitem__(self, key):
+        j = self.hash_function(key)
+        curr_bucket = self.table[j]
+        if curr_bucket is None:
+            raise KeyError("Key Error: " + str(key))
+        return curr_bucket[key].value
+
+    def __setitem__(self, key, value):
+        j = self.hash_function(key)
+        if self.table[j] is None:
+            self.table[j] = UnsortedArrayMap()
+        old_size = len(self.table[j])
+
+        #Adds to the end of the DLL
+        self.dll.add_last(key)
+        #Adds Node into HashTable
+        node = self.dll.last_node()
+        #Inserts Node into the HashTable
+        self.table[j][key] = node
+
+
+        new_size = len(self.table[j])
+        if (new_size > old_size):
+            self.n += 1
+        if (self.n > self.N):
+            self.rehash(2 * self.N)
+
+    def __delitem__(self, key):
+        j = self.hash_function(key)
+        curr_bucket = self.table[j]
+        # Runs delete function on the node in the table
+        self.dll.delete(self.table[j])
+        if curr_bucket is None:
+            raise KeyError("Key Error: " + str(key))
+        del curr_bucket[key]
+        self.n -= 1
+        if (curr_bucket.is_empty()):
+            #Sets that hashtable index to None
+            self.table[j] = None
+        if (self.n < self.N // 4):
+            self.rehash(self.N // 2)
+
+    def __iter__(self):
+        for i in (self.dll):
+            yield i
+
+    def rehash(self, new_size):
+        old = []
+        for key in self:
+            value = self[key]
+            old.append((key, value))
+        self.table = [None] * new_size
+        self.n = 0
+        self.N = new_size
+        for (key, value) in old:
+            self[key] = value
+
+class EmptyCollection(Exception):
     pass
 
-class ArrayStack:
-    def __init__(self):
-        self.data = []
 
-    def __len__(self):
-        return len(self.data)
-
-    def is_empty(self):
-        return len(self) == 0
-
-    def push(self, val):
-        self.data.append(val)
-
-    def top(self):
-        if (self.is_empty()):
-            raise Empty("Stack is empty")
-        return self.data[-1]
-
-    def pop(self):
-        if (self.is_empty()):
-            raise Empty("Stack is empty")
-        return self.data.pop()
-
-class ArrayQueue:
-    INITIAL_CAPACITY = 10
-
-    def __init__(self):
-        self.data = [None] * ArrayQueue.INITIAL_CAPACITY
-        self.num_of_elems = 0
-        self.front_ind = 0
-
-    def __len__(self):
-        return self.num_of_elems
-
-    def is_empty(self):
-        return (self.num_of_elems == 0)
-
-    def enqueue(self, elem):
-        if (self.num_of_elems == len(self.data)):
-            self.resize(2 * len(self.data))
-        back_ind = (self.front_ind + self.num_of_elems) % len(self.data)
-        self.data[back_ind] = elem
-        self.num_of_elems += 1
-
-    def dequeue(self):
-        if (self.is_empty()):
-            raise Empty("Queue is empty")
-        value = self.data[self.front_ind]
-        self.data[self.front_ind] = None
-        self.front_ind = (self.front_ind + 1) % len(self.data)
-        self.num_of_elems -= 1
-        if (self.num_of_elems < len(self.data) // 4):
-            self.resize(len(self.data) // 2)
-        return value
-
-    def first(self):
-        if self.is_empty():
-            raise Empty("Queue is empty")
-        return self.data[self.front_ind]
-
-    def resize(self, new_cap):
-        old_data = self.data
-        self.data = [None] * new_cap
-        old_ind = self.front_ind
-        for new_ind in range(self.num_of_elems):
-            self.data[new_ind] = old_data[old_ind]
-            old_ind = (old_ind + 1) % len(old_data)
-        self.front_ind = 0
-
-#===================================
-########### Q2 ####################
-#===================================
-def create_chain_bst(n):
+def intersection_list(lst1, lst2):
     bst = BinarySearchTreeMap()
-    for i in range(1, n + 1):
-        bst.subtree_insert(i)
-    return bst
+    answ = []
+    for i in lst1:
+        bst.subtree_insert(i, i)
+    for k in lst2:
+        if bst[k] is not None:
+            answ.append(k)
+    return answ
 
-def add_items(bst, low, high):
-    if high == 0:
-        return bst
-    if low == high:
-        bst.subtree_insert(low)
-    else:
-        mid = (low + high)//2
-        bst.subtree_insert(mid)
-        if high - low != 1:
-            L = add_items(bst ,low, mid - 1)
-        R = add_items(bst, mid + 1, high)
-
-def create_complete_bst(n):
-    bst = BinarySearchTreeMap()
-    add_items(bst, 1, n)
-    return bst
-#===================================
-########### Q3 ####################
-#===================================
-
-def restore_bst(prefix_lst):
-    bst = BinarySearchTreeMap()
-    if prefix_lst == []:
-        return bst
-    x = restore_bst_subtree(bst, prefix_lst, 0)
-    return x
-
-# def restore_bst_subtree(bst, lst, index):
-#     if index < len(lst):
-#         bst.subtree_insert(lst[index])
-#         restore_bst_subtree(bst, lst, index + 1)
-#     return bst
-
-def restore_bst_subtree(bst, lst, index):
-    #INITIALIZES THE STACK
-    stack = ArrayStack()
-
-    #SETS BST ROOT NODE AS 0th INDEX IN LST
-    node = BinarySearchTreeMap.Node(BinarySearchTreeMap.Item(lst[index]))
-    bst.root = node
-    bst.size += 1
-    #PUSH ONTO THE STACK THE NODE
-    stack.push(bst.root)
-
-    #WHILE LOOP
-    while index < len(lst) - 1:
-        #INCREMENT by 1 INDEX
-        index += 1
-        #INCREASES THE SIZE EVERY TIME THE WHILE LOOP RUNS
-        bst.size += 1
-        #CREATES A TEMP TO NONE
-        temp = None
-
-        #While the stack is not empty and while the lst[index] is greater than the stack.top.key value...
-        while not stack.is_empty() and lst[index] > stack.top().item.key:
-            temp = stack.pop()
-
-        if temp is not None:
-            temp.right = BinarySearchTreeMap.Node(BinarySearchTreeMap.Item(lst[index]))
-            stack.push(temp.right)
-        else:
-            temp = stack.top()
-            temp.left = BinarySearchTreeMap.Node(BinarySearchTreeMap.Item(lst[index]))
-            stack.push(temp.left)
-    return bst
-
-'''
-example_preorder_lst = [9, 7, 3, 1, 5, 13, 11, 15]
-result = restore_bst(example_preorder_lst)
-result_1 = restore_bst([1])
-for node in result.inorder(): #CHECKS IF THE INORDER RESULT is 1
-    print(node.item.key == 1)
-print("All test cases passed for 3.")
+    # lst1.sort()
+    # lst2.sort()
+    #
+    # index1 = 0
+    # index2 = 0
+    # answer = []
+    # while index1 < len(lst1) or index2 < len(lst2):
+    #     if lst1[index1] > lst2[index2]:
+    #         index2 += 1
+    #     elif lst1[index1] < lst2[index2]:
+    #         index1 += 1
+    #     else:
+    #         answer.append(lst1[index1])
+    #         index1 += 1
+    #         index2 += 1
+    # return answer
 
 
 
-result = restore_bst([9, 7, 3, 1, 5, 13, 11, 15])
-compare = [9, 7, 3, 1, 5, 13, 11, 15]
-compare2 = [1, 3, 5, 7, 9, 11, 13, 15]
-i = 0
-for node in result.inorder():
-    print(node.item.key, end="")
-    print(node.item.key == compare2[i])
-    i += 1
-
-
-result = restore_bst([9, 7, 3, 1, 5, 13, 11, 15])
-compare = [9, 7, 3, 1, 5, 13, 11, 15]
-i = 0
-for node in result.preorder():
-    print(node.item.key, end="")
-    print(node.item.key == compare[i])
-    i += 1
-
-
-result = restore_bst([])
-i = len(result)
-print(i == 0)
-
-
-result = restore_bst([1])
-compare = [1]
-i = 0
-for node in result.inorder():
-    print(node.item.key, end="")
-    print(node.item.key == 1)
-'''
-
-#===================================
-########### Q4 ####################
-#===================================
-def find_min_abs_difference(bst):
-    lst = []
-    for node in bst.inorder():
-        lst.append(node.item.key)
-    pause = [abs(a - b) for a, b in zip(lst, lst[1:])]
-    return min(pause)
 
 
